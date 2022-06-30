@@ -1,0 +1,18 @@
+name: MicLoSPunish
+version: '${project.version}'
+main: net.syobonoon.plugin.miclospunish.MicLoSPunish
+api-version: 1.15
+
+commands:
+  dainai:
+    description: You can punish the other players.
+    permission: miclospunish.dainai
+    permission-message: You don't have <permission>
+    usage: /<command> [Player]
+
+permissions:
+  miclospunish.*:
+    children:
+      miclospunish.dainai: true
+  miclospunish.dainai:
+    default: op
